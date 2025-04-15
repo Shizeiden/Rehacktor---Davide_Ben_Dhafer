@@ -8,8 +8,8 @@ Inoltre è anche possibile modificare i propri dati da un form che ci permette d
 
 ## API
 
-API: https://rawg.io/
-BaaS: https://supabase.com/
+- API: https://rawg.io/
+- BaaS: https://supabase.com/
 
 ## Stile
 
@@ -46,4 +46,4 @@ Ho usato il context per creare:
 
 ## Deployment
 
-https://rehacktor-specializzazione.vercel.app/
+LINK: https://rehacktor-specializzazione.vercel.app/
