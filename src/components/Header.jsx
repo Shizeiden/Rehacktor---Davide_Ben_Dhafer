@@ -60,7 +60,7 @@ export default function Header() {
               {/* Gestisci il click sul "Account" per aprire/chiudere il dropdown */}
               <div className="flex items-center gap-2 cursor-pointer" onClick={toggleDropdown}>
                 {/* Rimuovo l'avatar */}
-                <span>Account</span>
+                <span className="mt-2">Account</span>
                 {/* Freccetta che cambia direzione automaticamente */}
                 <svg
                   className={`w-4 h-4 transform transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
@@ -96,7 +96,7 @@ export default function Header() {
             </li>
           </ul>
         ) : (
-          <ul className="flex items-center gap-4">
+          <ul className="flex items-center gap-4 mt-2">
             <li>
               <Link to="/login" className="secondary">Login</Link>
             </li>
