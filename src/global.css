@@ -1,13 +1,29 @@
 @import "tailwindcss";
 
+* {
+    font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1, h2 {
     text-align: center;
     margin-top: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .nav-custom {
     box-shadow: 2px 2px 6px rgb(20, 3, 94);
 }
+
+/* Rimuove la freccetta di default dal <summary> */
+details summary {
+    list-style: none; /* Disabilita la freccetta */
+  }
+  
 
 footer {
     
@@ -43,6 +59,7 @@ footer {
     width: 220px;
     
 }
+
 
 
 

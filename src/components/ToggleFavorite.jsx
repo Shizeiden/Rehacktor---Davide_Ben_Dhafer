@@ -6,7 +6,6 @@ import FavoritesContext from "../context/FavoritesContext";
 
 export default function ToggleFavorite({ data }) {
     const { favorites, addFavorites, removeFavorite } = useContext(FavoritesContext);
-    // console.log(favorites);
 
     if (!data || !data.id) {
         console.error("Errore: 'data' o 'data.id' non esiste.", data);
@@ -22,14 +21,23 @@ export default function ToggleFavorite({ data }) {
     };
 
     const handleToggleFavorite = () => {
-        if (isFavorite(data.id)) {
-            const favoriteToRemove = favorites.find(fav => +fav.game_id === +data.id);
+        if (!Array.isArray(favorites)) {
+            console.error("favorites non è un array:", favorites);
+            return;
+          }
+        
+          const alreadyFavorite = isFavorite(data.id);
+        
+          if (alreadyFavorite) {
+            const favoriteToRemove = favorites.find(
+              (fav) => +fav.game_id === +data.id
+            );
             if (favoriteToRemove) {
-                removeFavorite(favoriteToRemove);
-            } else {
-                addFavorites(data);
+              removeFavorite(favoriteToRemove);
             }
-        }
+          } else {
+            addFavorites(data);
+          }
     };
 
 

@@ -26,7 +26,7 @@ export default function FavoritesProvider({ children }) {
     const addFavorites = async (game) => {
         if (!session?.user?.id) return;
 
-        await supabase
+        const { error } = await supabase
             .from("favorites")
             .insert([
                 {
@@ -68,7 +68,7 @@ export default function FavoritesProvider({ children }) {
             getFavorites();
         }
         
-        const favorites = supabase
+        const favoritesChannel = supabase
             .channel("favorites")
             .on(
                 "postgres_changes",
@@ -78,10 +78,7 @@ export default function FavoritesProvider({ children }) {
             .subscribe();
 
         return () => {
-            if (favorites) {
-                supabase.removeChannel(favorites);
-            }
-            favorites.unsubscribe();
+                supabase.removeChannel(favoritesChannel); 
         };
     }, [getFavorites, session]);
 
