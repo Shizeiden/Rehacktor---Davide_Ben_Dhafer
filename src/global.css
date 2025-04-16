@@ -42,10 +42,9 @@ footer {
 }
 
 .card-img {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     margin-bottom: 2rem;
     box-shadow: 2px 2px 6px rgb(20, 3, 94);
-    /* margin-top: 20px; */
     height: 150px;
     width: 220px;
 }
@@ -56,18 +55,16 @@ footer {
     margin-bottom: 2rem;
     border-radius: 10px;
     box-shadow: 4px 4px 6px rgb(20, 3, 94);
-    width: 220px;
+    width: 260px;
     
 }
-
-
 
 
 /* GRID SYSTEM */
 
 .layout-grid {
     display: grid;
-    grid-template-columns: 16rem 1fr;
+    grid-template-columns: 14rem 1fr;
   }
   
   .sidebar {
@@ -84,7 +81,7 @@ footer {
   
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
 
